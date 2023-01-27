@@ -11,7 +11,7 @@ const App = () => {
         <div className="app">
             <span>App</span>
             <button onClick={() => setCount(count + 1)}>Count</button>
-            <Child1 count={count} />
+            <Child1 />
         </div>
     );
 };

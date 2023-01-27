@@ -1,15 +1,11 @@
 import React from "react";
 
-type child3PropsType = {
-    count: number;
-};
-
-const Child3 = ({ count }: child3PropsType) => {
+const Child3 = () => {
     return (
         <div className="child3">
             <span>Child3</span>
             <br />
-            <span>Counter: {count}</span>
+            <span>Counter: {0}</span>
         </div>
     );
 };
