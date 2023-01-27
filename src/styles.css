@@ -1,0 +1,47 @@
+.app {
+    background-color: #355c7d;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+    color: white;
+    font-size: 20px;
+    font-family: "Lato", sans-serif;
+    width: 50%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+button {
+    margin-left: 20px;
+    background-color: aquamarine;
+    border: 1px solid black;
+    border-radius: 4px;
+    padding: 6px 12px;
+    font-size: 16px;
+    font-family: "Lato", sans-serif;
+    cursor: pointer;
+}
+
+.child1 {
+    margin-top: 20px;
+    background-color: #6c5b7b;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.child2 {
+    margin-top: 20px;
+    background-color: #c06c84;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
+
+.child3 {
+    margin-top: 20px;
+    background-color: #f67280;
+    padding: 20px;
+    border-radius: 4px;
+    border: 1px solid black;
+}
