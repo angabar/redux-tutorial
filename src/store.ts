@@ -1,11 +1,15 @@
-import { combineReducers } from "redux";
+import { configureStore } from "@reduxjs/toolkit";
 
-import appReducer from "./redux/reducers";
+import counterReducer from "./redux/reducers";
 
 export type reduxStoreType = {
-    appReducer: {
+    counterReducer: {
         count: number;
     };
 };
 
-export const store = combineReducers({ appReducer });
+export const store = configureStore({
+    reducer: {
+        counterReducer,
+    },
+});

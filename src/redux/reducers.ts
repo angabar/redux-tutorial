@@ -1,21 +1,17 @@
-import { AnyAction } from "redux";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
-import { SET_COUNT } from "./constants";
+export const counterSlice = createSlice({
+    name: "counter",
+    initialState: {
+        count: 0,
+    },
+    reducers: {
+        setCount(state, action: PayloadAction<number>) {
+            state.count = action.payload;
+        },
+    },
+});
 
-const initialState = {
-    count: 0,
-};
+export const { setCount } = counterSlice.actions;
 
-const appReducer = (state = initialState, action: AnyAction) => {
-    switch (action.type) {
-        case SET_COUNT:
-            return {
-                ...initialState,
-                count: action.payload,
-            };
-        default:
-            return state;
-    }
-};
-
-export default appReducer;
+export default counterSlice.reducer;

@@ -2,15 +2,17 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 import Child1 from "./components/Child1";
-import { setCount } from "./redux/actions";
 import { reduxStoreType } from "./store";
+import { setCount } from "./redux/reducers";
 
 import "./styles.css";
 
 const App = () => {
     const dispatch = useDispatch();
 
-    const { count } = useSelector((state: reduxStoreType) => state.appReducer);
+    const { count } = useSelector(
+        (state: reduxStoreType) => state.counterReducer,
+    );
 
     return (
         <div className="app">

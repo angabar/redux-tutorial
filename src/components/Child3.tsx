@@ -4,7 +4,9 @@ import { useSelector } from "react-redux";
 import { reduxStoreType } from "../store";
 
 const Child3 = () => {
-    const { count } = useSelector((state: reduxStoreType) => state.appReducer);
+    const { count } = useSelector(
+        (state: reduxStoreType) => state.counterReducer,
+    );
 
     return (
         <div className="child3">
