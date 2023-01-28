@@ -1,13 +1,13 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { configureStore } from "@reduxjs/toolkit";
+import { createStore } from "@reduxjs/toolkit";
 import { Provider } from "react-redux";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import appReducer from "./redux/reducers";
+import { store } from "./store";
 
-let store = configureStore(appReducer);
+const reduxStore = createStore(store);
 
 const root = ReactDOM.createRoot(
     document.getElementById("root") as HTMLElement,
@@ -15,7 +15,7 @@ const root = ReactDOM.createRoot(
 
 root.render(
     <React.StrictMode>
-        <Provider store={store}>
+        <Provider store={reduxStore}>
             <App />
         </Provider>
     </React.StrictMode>,
